@@ -2,6 +2,7 @@ package org.generation.blogPessoal.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,10 +20,10 @@ public class TemaModel {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 	 
-	 @NotBlank(message = "O atributo descrição é Obrigatório e não pode utilizar espaços em branco!")
-	 private String descriçao;
+	 @NotBlank(message = "O atributo descricao é Obrigatório e não pode utilizar espaços em branco!")
+	 private String descricao;
 	 
-	 @OneToMany(mappedBy="tema")
+	 @OneToMany(mappedBy="tema", cascade = CascadeType.ALL)
 	 @JsonIgnoreProperties("tema")
 	 private List<PostagemModel> postagem;
 
@@ -34,12 +35,12 @@ public class TemaModel {
 		this.id = id;
 	}
 
-	public String getDescriçao() {
-		return descriçao;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setDescriçao(String descriçao) {
-		this.descriçao = descriçao;
+	public void setDescriçao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public List<PostagemModel> getPostagem() {
