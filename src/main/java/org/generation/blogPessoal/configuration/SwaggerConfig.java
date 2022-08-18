@@ -2,16 +2,17 @@ package org.generation.blogPessoal.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.responses.ApiResponse;
+import io.swagger.v3.oas.models.responses.ApiResponses;
 
-@configuration
+@Configuration
 public class SwaggerConfig {
 
 	@Bean
@@ -22,15 +23,15 @@ public class SwaggerConfig {
 					.description("Projeto Blog Pessoal - Generation Brasil")
 					.version("v0.0.1")
 				.license(new License()
-					.name("Generation Brasil")
-					.url("https://brazil.generation.org/"))
+					.name("Projeto Blog Pessoal")
+					.url("https://github.com/jessikaneves/Blog-Pessoal"))
 				.contact(new Contact()
-					.name("Conteudo Generation")
-					.url( )
-					.email("conteudogeneration@gmail.com")))
+					.name("Blog Pessoal Generation")
+					.url("https://github.com/jessikaneves/Blog-Pessoal")
+					.email("jesssikahh@hotmail.com")))
 				.externalDocs(new ExternalDocumentation()
 					.description("Github")
-					.url("https://github.com/conteudoGeneration/"));
+					.url("https://github.com/jessikaneves/Blog-Pessoal"));
 	}
 
 	@Bean
@@ -60,7 +61,6 @@ public class SwaggerConfig {
 	}
 	
 }
-Footer
+
 
 	
-}
